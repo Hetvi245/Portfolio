@@ -1,5 +1,3 @@
-### README for Portfolio Website
-
 # **Portfolio Website**
 
 ## **Introduction**
