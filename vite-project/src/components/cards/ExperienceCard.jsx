@@ -15,6 +15,7 @@ const Image = styled.img`
   @media only screen and (max-width: 768px) {
     height: 40px;
   }
+  background-color: white
 `;
 const Body = styled.div`
   width: 100%;
@@ -36,6 +37,7 @@ const Company = styled.div`
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
+    
 `;
 const Date = styled.div`
   font-size: 12px;
@@ -81,6 +83,7 @@ const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  
 `;
 
 const ExperienceCard = ({ experience }) => {
@@ -91,10 +94,17 @@ const ExperienceCard = ({ experience }) => {
           width="100%"
           height="100%"
           alt={experience?.company}
-          style={{ borderRadius: "50%", objectFit: "cover" }}
+          style={{ borderRadius: "50%", objectFit: "contain", width: "100%", 
+            height: "100%", }}
           src={experience?.img}
         />
       }
+      iconStyle={{
+        backgroundColor: "white", // Set the circle background color here
+        color: "black", // Set the color of the icon/text in the circle
+        boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)", // Optional: Add a shadow for better visibility
+        
+      }}
       contentStyle={{
         display: "flex",
         flexDirection: "column",

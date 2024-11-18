@@ -110,9 +110,11 @@ const ProjectCard = ({ project }) => {
           <Avatar src={member.img} />
         ))}
       </Members>
-      <Button href={project.github} target="_blank">
-        View Code
-      </Button>
+      {!project.hideCode && ( // Conditionally render the button
+        <Button href={project.github} target="_blank" rel="noopener noreferrer">
+          View Code
+        </Button>
+      )}
     </Card>
   );
 };

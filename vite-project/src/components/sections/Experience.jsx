@@ -31,6 +31,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
+  background-color: white
   font-weight: 600;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};

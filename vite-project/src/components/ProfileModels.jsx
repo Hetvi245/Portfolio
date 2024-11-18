@@ -1,37 +1,38 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
-// Import your existing 3D model functions
-import { Bird, Island, Plane, Sky } from "../../models"; // Adjust the path to where your functions are
+import styled from "styled-components";
+import headerImg from "../../assets/header-img.svg"; // Ensure the path to the image is correct
+import "animate.css"; // Import animate.css for animations
+import TrackVisibility from "react-on-screen";
 
-const ProfileModels = ({ modelType, modelProps }) => {
-  const renderModel = () => {
-    switch (modelType) {
-      case "bird":
-        return <Bird {...modelProps} />;
-      case "island":
-        return <Island {...modelProps} />;
-      case "plane":
-        return <Plane {...modelProps} />;
-      case "sky":
-        return <Sky {...modelProps} />;
-      default:
-        return null;
-    }
-  };
+const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 600px; /* Optional: Adjust size */
+  margin: auto; /* Center the image */
+`;
 
+const ProfileModels = () => {
   return (
-    <div style={{ width: "100%", height: "100%", maxWidth: "400px", maxHeight: "400px" }}>
-      <Canvas camera={{ position: [0, 0, 5], near: 0.1, far: 1000 }}>
-        <Suspense fallback={null}>
-          {/* Lighting */}
-          <ambientLight intensity={0.5} />
-          <directionalLight position={[1, 1, 1]} intensity={1} />
-          {/* Render the selected model */}
-          {renderModel()}
-        </Suspense>
-      </Canvas>
-    </div>
+    <ImageContainer>
+      <TrackVisibility>
+        {({ isVisible }) => (
+          <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+            <img
+              src={headerImg}
+              alt="Profile Header"
+              style={{
+                width: "100%", // Make the image responsive
+                maxWidth: "400px", // Set a maximum width
+                height: "auto", // Maintain aspect ratio
+              }}
+            />
+          </div>
+        )}
+      </TrackVisibility>
+    </ImageContainer>
   );
 };
 
