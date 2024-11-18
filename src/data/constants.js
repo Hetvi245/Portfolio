@@ -1,5 +1,5 @@
-import cottonWoolImage from '/home/hetvi245/Portfolio_Web/vite-project/src/images/ml_project.png';
-import salesToolImage from '/home/hetvi245/Portfolio_Web/vite-project/src/images/sales_tool.png';
+import cottonWoolImage from '/home/hetvi245/Portfolio_Web/src/images/ml_project.png';
+import salesToolImage from '/home/hetvi245/Portfolio_Web/src/images/sales_tool.png';
 export const Bio = {
   name: "Hetvi Parikh",
   roles: [
