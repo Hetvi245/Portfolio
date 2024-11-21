@@ -1,12 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { Bio } from "../../data/constants";
-import {
-  FacebookRounded,
-  Instagram,
-  LinkedIn,
-  Twitter,
-} from "@mui/icons-material";
 
 const FooterContainer = styled.div`
   width: 100%;

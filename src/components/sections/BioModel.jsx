@@ -14,6 +14,7 @@ const Container = styled.div`
   height: 100vh;
   width: 100%;
   padding: 20px 40px;
+  position: relative; /* Ensure stacking context is preserved */
 
   @media (max-width: 960px) {
     flex-direction: column;
@@ -82,6 +83,7 @@ const ResumeButton = styled.a`
   max-width: 300px;
   text-align: center;
   padding: 16px 0;
+  z-index: 10; /* Ensure the button is above other elements */
 
   background: linear-gradient(
     225deg,
@@ -104,6 +106,7 @@ const ResumeButton = styled.a`
     font-size: 18px;
   }
   color: white;
+  position: relative; /* Ensure button's position context is preserved */
 `;
 
 const ModelContainer = styled.div`
@@ -132,10 +135,7 @@ const BioModel = () => {
             />
           </Roles>
           <SubTitle>{Bio.description}</SubTitle>
-          <ResumeButton
-            href={Bio.resume}
-            target="_blank"
-          >
+          <ResumeButton href={Bio.resume} target="_blank" rel="noopener noreferrer">
             Check Resume
           </ResumeButton>
         </motion.div>
@@ -143,8 +143,7 @@ const BioModel = () => {
       <ModelContainer>
         <motion.div {...headContentAnimation}>
           <Tilt>
-            <ProfileModels
-            />
+            <ProfileModels />
           </Tilt>
         </motion.div>
       </ModelContainer>

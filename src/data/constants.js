@@ -1,5 +1,5 @@
-import cottonWoolImage from '/home/hetvi245/Portfolio_Web/src/images/ml_project.png';
-import salesToolImage from '/home/hetvi245/Portfolio_Web/src/images/sales_tool.png';
+import cottonWoolImage from '/home/hetvi245/Portfolio_Web/src/assets/images/ml_project.png';
+import salesToolImage from '/home/hetvi245/Portfolio_Web/src/assets/images/sales_tool.png';
 export const Bio = {
   name: "Hetvi Parikh",
   roles: [
@@ -12,7 +12,7 @@ export const Bio = {
     "I am a third-year Computer Science student at McMaster University with a strong foundation in software development, data analysis, and machine learning. I try to combine academic excellence with hands-on experience in developing innovative solutions that optimize processes and improve efficiency. My technical skills span across a range of programming languages, frameworks, and tools, including Python, JavaScript, React, and TensorFlow.  Driven by a growth mindset, I am committed to making meaningful contributions through high-quality work and continuous learning.",
   github: "https://github.com/hetvi245",
   resume:
-    "https://drive.google.com/file/d/1GNE6xmUmHQHOp-c_YUvchzXMrEAfLpKx/view?usp=drive_link",
+    "https://drive.google.com/file/d/1CXs9M1AZ2J4yvmEG3mlqc4T-f95UwC6f/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/hetvi-parikh-a96b82249/",
 };
 

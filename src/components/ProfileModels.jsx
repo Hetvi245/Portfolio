@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import headerImg from "../../assets/header-img.svg"; // Ensure the path to the image is correct
+import headerImg from "../assets/header-img.svg"; // Ensure the path to the image is correct
 import "animate.css"; // Import animate.css for animations
 import TrackVisibility from "react-on-screen";
 
