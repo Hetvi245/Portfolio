@@ -1,5 +1,5 @@
-import cottonWoolImage from 'src/assets/images/ml_project.png';
-import salesToolImage from 'src/assets/images/sales_tool.png';
+import cottonWoolImage from '../assets/images/ml_project.png';
+import salesToolImage from '../assets/images/sales_tool.png';
 export const Bio = {
   name: "Hetvi Parikh",
   roles: [
